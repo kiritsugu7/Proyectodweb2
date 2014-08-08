@@ -2,8 +2,8 @@
 <html>
 <head>
 	<title>P&aacute;gina principal</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+  <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
 </head>
 <body class="container">
 	<div class="navbar">
@@ -20,54 +20,42 @@
     </ul>
 	</div>
 	<div class="row">
-        <div class="col-lg-2">    
+        <div class="col-lg-1">    
         </div>
-        <div class="col-lg-8">
-        	<table class="table table-bordered table-hover table-condensed table-striped">
+        <div class="col-lg-7">
+          <table id="tblTablaCarrera" class="table">
+          <thead>
             <tr>
               <th>C&oacute;digo</th>
               <th>Nombre</th>
-              <th>Acci&oacute;n</th>
+              <th>&nbsp;</th>
             </tr>
+          </thead>
+          <tbody>
+            <!-- el cuerpo de la tabla sera llenado con JavaScript -->
+          </tbody>
+          <tfoot>
             <tr>
-              <td>SO</td>
-              <td><a href="perfilsalud.html">Salud Ocupacional</a></td>
-              <td><a href="perfilsaludedit.html">Editar</a>/<a href="erasedcontent4.html">Eliminar</a></td>
+              <td colspan="3">
+              </td>
             </tr>
-            <tr>
-              <td>IS</td>
-              <td><a href="perfilisw.html">Ingenier&iacute;a Software</a></td>
-              <td><a href="perfiliswedit.html">Editar</a>/<a href="erasedcontent4.html">Eliminar</a></td>
-            </tr>
-            <tr>
-              <td>CN</td>
-              <td><a href="perfilconta.html">Contabilidad</a></td>
-              <td><a href="perfilcontaedit.html">Editar</a>/<a href="erasedcontent4.html">Eliminar</a></td>
-            </tr>
-            <tr>
-              <td>IL</td>
-              <td><a href="perfilingles.html">Ingl&eacute;s como lengua extranjera</a></td>
-              <td><a href="perfilinglesedit.html">Editar</a>/<a href="erasedcontent4.html">Eliminar</a></td>
-            </tr>
-            <tr>
-              <td>RH</td>
-              <td><a href="perfilrh.html">Recursos Humanos</a></td>
-              <td><a href="perfilrhedit.html">Editar</a>/<a href="erasedcontent4.html">Eliminar</a></td>
-            </tr>
-            <tr>
-              <td>GA</td>
-              <td><a href="perfilgambiental.html">Gesti&oacute;n Ambiental</a></td>
-              <td><a href="perfilgambientaledit.html">Editar</a>/<a href="erasedcontent4.html">Eliminar</a></td>
-            </tr>
-            <tr>
-              <td>AA</td>
-              <td><a href="perfilaa.html">Administraci&oacute; Aduanera</a></td>
-              <td><a href="perfilaaedit.html">Editar</a>/<a href="erasedcontent4.html">Eliminar</a></td>
-            </tr>
-              </table>
-            </div>
-        <div class="col-lg-2">
+          </tfoot>
+        </table>
+        </div>
+        <div class="col-lg-4"> 
+          <form id="frmAgregarCarrera">
+            <fieldset>
+                <legend>Agregar nueva carrera</legend>
+                <label for="idCarrera" class="control-label">C&oacute;digo:</label>
+                <input type="text" id="idCarrera" class="form-control" required autofocus><br>
+                <label for="nomCarrera" class="control-label">Nombre:</label>
+                <input type="text" id="nomCarrera" class="form-control" required><br>
+                <input type="submit" value="Agregar" class="btn btn-default">
+            </fieldset> 
+          </form>
         </div>
     </div>
+    <script src="js/ext/jquery-1.8.3.min.js"></script>
+    <script src="js/javascript.js"></script>
 </body>
 </html>
